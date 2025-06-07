@@ -2,7 +2,7 @@
 
 A simple, modern, and responsive calculator built with **HTML**, **CSS**, and **JavaScript**. Perfect for everyday calculations or learning how to build interactive web apps.
 
-![Calculator Screenshot](screenshot.png) <!-- Replace with an actual screenshot file name if available -->
+![image](https://github.com/user-attachments/assets/25e0d028-bd95-4390-bb9b-d801000e1649)
 
 ## 🚀 Features
 
