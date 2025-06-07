@@ -1,0 +1,149 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Calculator Container */
+.calculator {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Display Styling */
+.display {
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: right;
+  padding: 25px 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid Layout for Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* General Button Styling */
+button {
+  border: none;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  height: 70px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Hover Effects */
+button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+button:hover:before {
+  left: 100%;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Type Styling */
+.number,
+.decimal {
+  background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+  color: #333;
+}
+
+.operator {
+  background: linear-gradient(145deg, #ff6b6b, #ee5a52);
+  color: white;
+  font-weight: 600;
+}
+
+.equals {
+  background: linear-gradient(145deg, #51cf66, #40c057);
+  color: white;
+  font-weight: 600;
+}
+
+.clear,
+.clear-entry {
+  background: linear-gradient(145deg, #ffd43b, #fab005);
+  color: #333;
+  font-weight: 600;
+}
+
+/* Style for zero button to span two columns */
+.zero {
+  grid-column: span 2;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 480px) {
+  .calculator {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .display {
+    font-size: 2rem;
+    padding: 20px 15px;
+    min-height: 70px;
+  }
+
+  button {
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+}
